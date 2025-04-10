@@ -111,6 +111,316 @@
         button:active {
             animation: click-animation 0.2s ease;
         }
+/* Dynamic Weather Backgrounds */
+body.clear {
+    background: linear-gradient(135deg, #fceabb, #f8b500); /* Sunny */
+}
+
+body.rain {
+    background: linear-gradient(135deg, #667db6, #0082c8); /* Rainy */
+}
+
+body.clouds {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50); /* Cloudy */
+}
+
+body.snow {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Snowy */
+}
+
+body.thunderstorm {
+    background: linear-gradient(135deg, #373B44, #4286f4); /* Thunderstorm */
+}
+
+body.mist, body.haze {
+    background: linear-gradient(135deg, #d7d2cc, #304352); /* Foggy */
+}
+
+/* Smooth background transition */
+body {
+    transition: background 1s ease-in-out;
+}
+.unit-toggle {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Toggle Switch Base */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Slider circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+    background-color: #ff6b6b;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 2rem auto;
+    color: #222;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.temp-block {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ff4f70;
+}
+
+.condition {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.extra-info {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.extra-info p {
+    margin: 0.3rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2e2e2e;
+}
+
+.temp-block {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ff5e78;
+}
+
+.condition {
+    font-size: 1.3rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.extra-info {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.extra-info p {
+    margin: 0.4rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.temp-block {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ff6b6b;
+}
+
+.condition {
+    font-size: 1.2rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.extra-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.extra-info p {
+    margin: 0.4rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.temp-block {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.condition {
+    font-size: 1.2rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 0.5rem;
+    color: #fceabb;
+}
+
+.extra-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #fefefe;
+}
+
+.extra-info p {
+    margin: 0.4rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 2rem auto;
+    color: #222;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.temp-block {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ff4f70;
+}
+
+.condition {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.extra-info {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.extra-info p {
+    margin: 0.3rem 0;
+}
+
+.toggle-btn {
+    margin-top: 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn:hover {
+    background-color: #ff4f4f;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
     </style>
 </head>
 <body>
@@ -121,6 +431,15 @@
         <h2>Discover Weather 🌍</h2>
         <input type="text" id="city" placeholder="Enter city name 🌆">
         <button onclick="fetchWeather()">Get Weather 🌦️</button>
+<div class="unit-toggle">
+    <label class="switch">
+        <input type="checkbox" id="unit-toggle" onchange="toggleUnits()">
+        <span class="slider"></span>
+    </label>
+    <span id="unit-label">Show in °C</span>
+</div>
+
+
         <div id="team">
             <p>Created By:</p>
             <p>Praveen | Siva Priyan | Sarneesh | Santhosh | Mahesh Bharathi</p>
@@ -132,31 +451,77 @@
     <footer>
         <p>Stay Cool! ☔</p>
     </footer>
-    <script>
-        async function fetchWeather() {
-            const city = document.getElementById('city').value;
-            const weatherInfo = document.getElementById('weather-info');
-            weatherInfo.innerHTML = '';
-            if (city) {
-                try {
-                    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b3773f724f610694e228b15f630002a8&units=imperial`);
-                    const data = await response.json();
-                    if (data.main) {
-                        weatherInfo.innerHTML = `
-                            <p><strong>🌇 Location:</strong> ${data.name}, ${data.sys.country}</p>
-                            <p><strong>🌡️ Temperature:</strong> ${data.main.temp}°F</p>
-                            <p><strong>🌤️ Condition:</strong> ${data.weather[0].description}</p>
-                        `;
-                    } else {
-                        weatherInfo.innerHTML = `<p>❌ City not found. Please try again.</p>`;
-                    }
-                } catch (error) {
-                    weatherInfo.innerHTML = `<p>⚠️ Unable to fetch weather data. Please try again later.</p>`;
+<!-- [Shortened for brevity in this view] -->
+<!-- All CSS stays the same as yours, so I'm only changing the SCRIPT part -->
+
+<!-- ...same HTML above -->
+
+<div class="weather-info" id="weather-info">
+    <!-- Weather data will display here -->
+</div>
+
+<!-- ...same HTML below -->
+<script>
+    let isCelsius = false;
+
+    async function fetchWeather() {
+        const city = document.getElementById('city').value;
+        const weatherInfo = document.getElementById('weather-info');
+        weatherInfo.innerHTML = '';
+        if (city) {
+            try {
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b3773f724f610694e228b15f630002a8&units=imperial`);
+                const data = await response.json();
+                if (data.main) {
+                    const tempF = data.main.temp;
+                    const tempC = ((tempF - 32) * 5 / 9).toFixed(2);
+                    const tempUnit = isCelsius ? '°C' : '°F';
+                    const displayTemp = isCelsius ? tempC : tempF;
+
+                    weatherInfo.innerHTML = `
+                        <div class="weather-card">
+                            <h2>${data.name}, ${data.sys.country}</h2>
+                            <div class="temp-block">
+                                ${displayTemp} ${tempUnit}
+                                <span class="condition">${data.weather[0].main} (${data.weather[0].description})</span>
+                            </div>
+                            <div class="extra-info">
+                                <p>💧 Humidity: ${data.main.humidity}%</p>
+                                <p>🌬️ Wind: ${data.wind.speed} m/s</p>
+                                <p>📈 Max: ${data.main.temp_max}°F | 📉 Min: ${data.main.temp_min}°F</p>
+                            </div>
+                        </div>
+                    `;
+
+                    // Apply weather-specific body class
+                    const condition = data.weather[0].main.toLowerCase();
+                    document.body.className = condition.includes("cloud") ? "clouds" :
+                                              condition.includes("rain") ? "rain" :
+                                              condition.includes("clear") ? "clear" :
+                                              condition.includes("snow") ? "snow" :
+                                              condition.includes("thunderstorm") ? "thunderstorm" :
+                                              (condition.includes("mist") || condition.includes("haze")) ? "mist" :
+                                              "";
+                } else {
+                    weatherInfo.innerHTML = `<p>❌ City not found. Please try again.</p>`;
                 }
-            } else {
-                weatherInfo.innerHTML = `<p>✏️ Please enter a city name.</p>`;
+            } catch (error) {
+                weatherInfo.innerHTML = `<p>⚠️ Unable to fetch weather data. Please try again later.</p>`;
             }
+        } else {
+            weatherInfo.innerHTML = `<p>✏️ Please enter a city name.</p>`;
         }
-    </script>
+    }
+
+    function toggleTemp() {
+        isCelsius = !isCelsius;
+        fetchWeather();
+        document.getElementById("unit-label").innerText = `Show in ${isCelsius ? '°F' : '°C'}`;
+    }
+
+    function toggleUnits() {
+        toggleTemp();
+    }
+</script>
 </body>
 </html>
